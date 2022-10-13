@@ -7,11 +7,13 @@ import { fetchCountry } from 'service/country-service';
 export const Country = () => {
   const { countryId } = useParams();
   const [countryArr, setCountryArr] = useState({});
+
   useEffect(() => {
     fetchCountry(countryId).then(data => {
       setCountryArr(data);
     });
   }, [countryId]);
+  
   console.log(countryId);
   const { flag, capital, countryName, id, languages, population } = countryArr;
 

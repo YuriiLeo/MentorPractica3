@@ -18,7 +18,6 @@ export const Home = () => {
   return (
     <Section>
       <Container>
-        <h2>Home</h2>
         <CountryList countries={countries}/>
       </Container>
     </Section>
